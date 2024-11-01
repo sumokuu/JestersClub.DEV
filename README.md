@@ -1,2 +1,2 @@
 # JestersClub.DEV
-JCD website host
+WE MAKE FURRY VIDEO GAMES!
