@@ -2,68 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Vincent OS </title>
-    <meta name="description" content="Vincent OS is a Operating System made in C# via Cosmos. It has a unique desktop. And it has Windows Compatibility. All for free!">
-    <meta http-equiv='content-language' content='en-us'>
-    <link rel="stylesheet" href="css/styleindex.css">
-    <link rel="icon" href="img/logo.png" type="image/x-icon">
+    <title>Game Website Layout</title>
 </head>
 <body>
-    <!-- NAVBAR SECTION-->
-    <nav class="navbar">
-        <div class="navbar__container">
-            <div class="navbar__logo">
-            <a href="https://vincent-os.cf"><img src="img/logo text.png" class="navbar__img" /></a>
-            </div>
-            <div class="navbar__item">
-                <a class="active" href="https://vincent-os.cf" title="Home Page" id="logo" data-hveid="8"> Home </a>
-            </div>
-            <div class="navbar__item">
-                <a href="pages/download.html" title="Download Page" id="logo" data-hveid="8"> Download </a>
-            </div>
-            <div class="navbar__item">
-                <a href="pages/contact.html" title="Contact Page" id="logo" data-hveid="8"> Contact </a>
-            </div>
-            <div class="navbar__item">
-                <a href="pages/about.html" title="About Page" id="logo" data-hveid="8"> About </a>
-            </div>
-            <div class="navbar__item">
-                <a href="https://docs.vincent-os.cf" title="Documentation Page" id="logo" data-hveid="8"> Documentation </a>
+
+    <!-- Header with Logo and Navigation -->
+    <header style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; background-color: #f2f2f2;">
+        <div>
+            <!-- Placeholder for logo -->
+            <img src="https://via.placeholder.com/100x50" alt="Logo" style="height: 50px;">
+        </div>
+        <nav>
+            <a href="#about" style="margin-right: 20px; text-decoration: none; color: black;">About</a>
+            <a href="#games" style="margin-right: 20px; text-decoration: none; color: black;">Games</a>
+            <a href="#contact" style="text-decoration: none; color: black;">Contact</a>
+            <!-- Social media icons -->
+            <a href="#" style="margin-left: 20px;"><img src="https://via.placeholder.com/20" alt="Twitter"></a>
+            <a href="#" style="margin-left: 10px;"><img src="https://via.placeholder.com/20" alt="Discord"></a>
+            <a href="#" style="margin-left: 10px;"><img src="https://via.placeholder.com/20" alt="Twitch"></a>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Background Image -->
+    <section style="position: relative; text-align: center; color: white;">
+        <!-- Background placeholder image -->
+        <img src="https://via.placeholder.com/1200x500" alt="Background" style="width: 100%; height: 500px; object-fit: cover;">
+        <!-- Overlay content -->
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <h1 style="font-size: 3em; font-weight: bold; color: #ffdf00; text-shadow: 2px 2px 5px black;">BATTLE VISION NETWORK</h1>
+            <div style="display: flex; gap: 10px; margin-top: 20px;">
+                <button style="padding: 10px 20px; font-size: 1em; border: none; background-color: #007BFF; color: white; cursor: pointer;">More</button>
+                <button style="padding: 10px 20px; font-size: 1em; border: none; background-color: #28A745; color: white; cursor: pointer;">Wishlist Now!</button>
             </div>
         </div>
-    </nav>
-    
+    </section>
 
-    <!--HOME SECTION-->
-
-    <div class="home">
-        <div class="home__container">
-            <h1 class="V__1">VINCENT OS</h1>
-            <h1 class="V__2">VINCENT OS</h1>
-            <P>A simple, Minimalistic, Customizable Distribution</P>
+    <!-- Carousel Section -->
+    <section style="text-align: center; padding: 20px;">
+        <!-- Placeholder images for carousel items -->
+        <div style="display: flex; justify-content: center; gap: 20px;">
+            <img src="https://via.placeholder.com/150" alt="Carousel 1" style="width: 150px; height: 150px; object-fit: cover;">
+            <img src="https://via.placeholder.com/150" alt="Carousel 2" style="width: 150px; height: 150px; object-fit: cover;">
+            <img src="https://via.placeholder.com/150" alt="Carousel 3" style="width: 150px; height: 150px; object-fit: cover;">
         </div>
-        <div class="home__download">
-            <p>Vincent OS is an Operating System Made in C# Via Cosmos.<br>
-                It Has a Unique Desktop with Windows Compatibility, All For Free!
-            </p>
+        <p style="margin-top: 10px;">• • •</p>
+    </section>
 
-            <div class="home__button">
-                <button><a href="pages/download.html"> DOWNLOAD </a></button>
-            </div>
-        </div>
-    </div>
-
-    <!--FOOTER SECTION-->
-    <footer>
-        <footer class="footer__container">
-            <div id="footer">
-                <p> © Vincent OS 2022</p>
-                <p> This website is using the <a href="https://www.gnu.org/licenses/gpl-3.0.html"> GPL-3.0 License</a>.</p>
-                <p> Made by ❤ and hosted on <a href="https://github.com/Vincent-OS/vincent-os-website"> GitHub Pages</a>.</p>
-            </div>
-        </footer>
+    <!-- Footer -->
+    <footer style="background-color: #f2f2f2; padding: 20px; text-align: center;">
+        <p>&copy; 2023 Game Website. All Rights Reserved.</p>
     </footer>
+
 </body>
 </html>
