@@ -1,57 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Website Layout</title>
+    <title>Nom Entreprise</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Libre+Baskerville:ital@1&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Header with Logo and Navigation -->
-    <header style="display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; background-color: #f2f2f2;">
-        <div>
-            <!-- Placeholder for logo -->
-            <img src="https://via.placeholder.com/100x50" alt="Logo" style="height: 50px;">
+    <!-- Header -->
+    <header>
+        <div class="nav-left">
+            <a href="#">Realisations</a>
+            <a href="#">Nos Services</a>
         </div>
-        <nav>
-            <a href="#about" style="margin-right: 20px; text-decoration: none; color: black;">About</a>
-            <a href="#games" style="margin-right: 20px; text-decoration: none; color: black;">Games</a>
-            <a href="#contact" style="text-decoration: none; color: black;">Contact</a>
-            <!-- Social media icons -->
-            <a href="#" style="margin-left: 20px;"><img src="https://via.placeholder.com/20" alt="Twitter"></a>
-            <a href="#" style="margin-left: 10px;"><img src="https://via.placeholder.com/20" alt="Discord"></a>
-            <a href="#" style="margin-left: 10px;"><img src="https://via.placeholder.com/20" alt="Twitch"></a>
-        </nav>
+        <div class="logo">Nom Entreprise</div>
+        <div class="nav-right">
+            <a href="#">Qui Sommes Nous</a>
+            <a href="#">Contactez-nous</a>
+        </div>
     </header>
 
-    <!-- Hero Section with Background Image -->
-    <section style="position: relative; text-align: center; color: white;">
-        <!-- Background placeholder image -->
-        <img src="https://via.placeholder.com/1200x500" alt="Background" style="width: 100%; height: 500px; object-fit: cover;">
-        <!-- Overlay content -->
-        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-            <h1 style="font-size: 3em; font-weight: bold; color: #ffdf00; text-shadow: 2px 2px 5px black;">BATTLE VISION NETWORK</h1>
-            <div style="display: flex; gap: 10px; margin-top: 20px;">
-                <button style="padding: 10px 20px; font-size: 1em; border: none; background-color: #007BFF; color: white; cursor: pointer;">More</button>
-                <button style="padding: 10px 20px; font-size: 1em; border: none; background-color: #28A745; color: white; cursor: pointer;">Wishlist Now!</button>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Vente et Aménagements <br> Meubles et Intérieur</h1>
+        <div class="hero-image">
+            <img src="https://via.placeholder.com/1600x400?text=Vintage+Furniture+Shop" alt="Vintage Hero Image">
+        </div>
+        <div class="flags">
+            <img src="https://via.placeholder.com/24x24" alt="French Flag">
+            <img src="https://via.placeholder.com/24x24" alt="English Flag">
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about">
+        <h2>Qui Sommes Nous</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2>Nos Services</h2>
+        <div class="service-item">
+            <img src="https://via.placeholder.com/200?text=Vintage+Sale" alt="Vintage Sale Image">
+            <div class="service-info">
+                <h3>Vente</h3>
+                <p>Description of the sale service.</p>
+            </div>
+        </div>
+        <div class="service-item">
+            <img src="https://via.placeholder.com/200?text=Vintage+Repair" alt="Vintage Repair Image">
+            <div class="service-info">
+                <h3>Réparation</h3>
+                <p>Description of the repair service.</p>
             </div>
         </div>
     </section>
 
-    <!-- Carousel Section -->
-    <section style="text-align: center; padding: 20px;">
-        <!-- Placeholder images for carousel items -->
-        <div style="display: flex; justify-content: center; gap: 20px;">
-            <img src="https://via.placeholder.com/150" alt="Carousel 1" style="width: 150px; height: 150px; object-fit: cover;">
-            <img src="https://via.placeholder.com/150" alt="Carousel 2" style="width: 150px; height: 150px; object-fit: cover;">
-            <img src="https://via.placeholder.com/150" alt="Carousel 3" style="width: 150px; height: 150px; object-fit: cover;">
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <h2>Dernières nouveautés</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="https://via.placeholder.com/150?text=Vintage+1" alt="Gallery Image 1"></div>
+            <div class="gallery-item"><img src="https://via.placeholder.com/150?text=Vintage+2" alt="Gallery Image 2"></div>
+            <div class="gallery-item"><img src="https://via.placeholder.com/150?text=Vintage+3" alt="Gallery Image 3"></div>
+            <div class="gallery-item"><img src="https://via.placeholder.com/150?text=Vintage+4" alt="Gallery Image 4"></div>
+            <div class="gallery-item"><img src="https://via.placeholder.com/150?text=Vintage+5" alt="Gallery Image 5"></div>
         </div>
-        <p style="margin-top: 10px;">• • •</p>
     </section>
 
     <!-- Footer -->
-    <footer style="background-color: #f2f2f2; padding: 20px; text-align: center;">
-        <p>&copy; 2023 Game Website. All Rights Reserved.</p>
+    <footer>
+        <div class="footer-left">
+            <p><strong>Nom Entreprise</strong></p>
+            <p>Téléphone: xxxxxxxxxx</p>
+            <p>Email: contact@example.com</p>
+            <p>Facebook: @nomentreprise</p>
+        </div>
+        <div class="footer-right">
+            <p>All rights reserved. Website hosted by GitHub.</p>
+            <img src="https://via.placeholder.com/24x24?text=18+" alt="Mature Content Warning">
+        </div>
     </footer>
 
 </body>

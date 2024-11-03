@@ -1,0 +1,173 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Libre Baskerville', serif;
+    background-color: #f0e7d1;
+    color: #4e342e;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #e3ccb2;
+    color: #4e342e;
+    font-family: 'Cinzel', serif;
+}
+
+header .nav-left a, header .nav-right a {
+    margin: 0 15px;
+    color: #4e342e;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    background-color: #4e342e;
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-family: 'Cinzel', serif;
+}
+
+.hero-image img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+/* Flags */
+.flags img {
+    width: 24px;
+    height: auto;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* About Us Section */
+.about {
+    padding: 50px 20px;
+    background-color: #f0e7d1;
+    text-align: center;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.about h2 {
+    font-size: 36px;
+    color: #6a1b1b;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: auto;
+    color: #4e342e;
+}
+
+/* Services Section */
+.services {
+    padding: 50px 20px;
+    background-color: #fff1e0;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.services h2 {
+    font-size: 36px;
+    color: #6a1b1b;
+    margin-bottom: 20px;
+}
+
+.service-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.service-item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 20px;
+    border: 2px solid #6a1b1b;
+}
+
+.service-info h3 {
+    font-size: 24px;
+    color: #4e342e;
+    font-family: 'Cinzel', serif;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 50px 20px;
+    background-color: #f0e7d1;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 36px;
+    color: #6a1b1b;
+    margin-bottom: 20px;
+    font-family: 'Cinzel', serif;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 1px solid #4e342e;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #4e342e;
+    color: #f0e7d1;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.footer-left p, .footer-right p {
+    margin-bottom: 5px;
+}
+
+.footer-right img {
+    width: 24px;
+    height: auto;
+    margin-top: 10px;
+}
