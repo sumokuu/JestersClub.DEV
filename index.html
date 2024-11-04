@@ -1,89 +1,110 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nom Entreprise</title>
+    <title>JestersClub</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Libre+Baskerville:ital@1&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
-
     <!-- Header -->
     <header>
-        <div class="nav-left">
-            <a href="#">Realisations</a>
-            <a href="#">Nos Services</a>
+        <div class="logo">JestersClub.DEV</div>
+
+    <!-- Wrap the navigation and social media icons in a container -->
+    <div class="header-right">
+        <nav class="header-links">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#games">Games</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Social media icons -->
+        <div class="social-media-icons">
+            <a href="https://discord.com" target="_blank" class="fab fa-discord"></a>
+            <a href="https://www.patreon.com" target="_blank" class="fab fa-patreon"></a>
+            <a href="https://www.furaffinity.net" target="_blank" class="fa fa-paw"></a>
+            <a href="https://github.com" target="_blank" class="fab fa-github"></a>
+            <a href="mailto:example@example.com" class="fas fa-envelope"></a>
         </div>
-        <div class="logo">Nom Entreprise</div>
-        <div class="nav-right">
-            <a href="#">Qui Sommes Nous</a>
-            <a href="#">Contactez-nous</a>
+        <div class="language-toggle">
+            <select name="language" id="language">
+                <option value="en">English</option>
+                <option value="fr">Français</option>
+            </select>
         </div>
+    </div>
+
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Vente et Aménagements <br> Meubles et Intérieur</h1>
-        <div class="hero-image">
-            <img src="https://via.placeholder.com/1600x400?text=Vintage+Furniture+Shop" alt="Vintage Hero Image">
-        </div>
-        <div class="flags">
-            <img src="https://via.placeholder.com/24x24" alt="French Flag">
-            <img src="https://via.placeholder.com/24x24" alt="English Flag">
+
+        <!-- anim Page -->
+        <section class="anim">
+            <div class="anim-content">
+                <img src="IMAGE GALLERY/LOGO BIG.gif" alt="Animated Center Image" class="animated-image">
+            </div>
+        </section>
+
+
+    <!-- Landing Page -->
+    <section class="landing">
+        <div class="landing-content">
+            <h1>Memeventure Paradox</h1>
+            <p>INCOMING...</p>
+            <button onclick="location.href='details.html'">Read More</button>
+            <div class="pixel-animation">[Pixel Animation Placeholder]</div>
         </div>
     </section>
 
-    <!-- About Us Section -->
-    <section class="about">
-        <h2>Qui Sommes Nous</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services">
-        <h2>Nos Services</h2>
-        <div class="service-item">
-            <img src="https://via.placeholder.com/200?text=Vintage+Sale" alt="Vintage Sale Image">
-            <div class="service-info">
-                <h3>Vente</h3>
-                <p>Description of the sale service.</p>
+    <!-- Games Section -->
+    <section class="games-section">
+        <h2>Our Games</h2>
+        <div class="game-showcase">
+            <img src="game-banner.jpg" alt="Orquette's Maze Adventures" class="game-banner">
+            <div class="game-info">
+                <h3>Orquette's Maze Adventures</h3>
+                <p>
+                    Once home to a majestic octopus who tragically lost his tentacles in mysterious mazes. The hero's job is to restore what was lost.
+                </p>
+                <div class="game-links">
+                    <a href="https://store.steampowered.com" target="_blank">Steam</a>
+                    <a href="https://store.playstation.com" target="_blank">PlayStation Store</a>
+                </div>
             </div>
         </div>
-        <div class="service-item">
-            <img src="https://via.placeholder.com/200?text=Vintage+Repair" alt="Vintage Repair Image">
-            <div class="service-info">
-                <h3>Réparation</h3>
-                <p>Description of the repair service.</p>
-            </div>
-        </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section class="gallery">
-        <h2>Dernières nouveautés</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item"><img src="https://via.placeholder.com/150?text=Vintage+1" alt="Gallery Image 1"></div>
-            <div class="gallery-item"><img src="https://via.placeholder.com/150?text=Vintage+2" alt="Gallery Image 2"></div>
-            <div class="gallery-item"><img src="https://via.placeholder.com/150?text=Vintage+3" alt="Gallery Image 3"></div>
-            <div class="gallery-item"><img src="https://via.placeholder.com/150?text=Vintage+4" alt="Gallery Image 4"></div>
-            <div class="gallery-item"><img src="https://via.placeholder.com/150?text=Vintage+5" alt="Gallery Image 5"></div>
+    <!-- About Section -->
+    <section class="about-section">
+        <h2>Who are we?</h2>
+        <div class="about-content">
+            <p>
+                We are JestersClub, a dedicated team passionate about creating unique and memorable games for our audience. 
+            </p>
+            <img src="about-image.jpg" alt="About Us" class="about-image">
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="footer-left">
-            <p><strong>Nom Entreprise</strong></p>
-            <p>Téléphone: xxxxxxxxxx</p>
-            <p>Email: contact@example.com</p>
-            <p>Facebook: @nomentreprise</p>
+            <div class="footer-icons">
+                <a href="https://discord.com" target="_blank" class="icon discord"></a>
+                <a href="https://patreon.com" target="_blank" class="icon patreon"></a>
+                <a href="https://furaffinity.net" target="_blank" class="icon furaffinity"></a>
+                <a href="https://github.com" target="_blank" class="icon github"></a>
+                <a href="mailto:someone@example.com" class="icon email"></a>
+            </div>
+            <p>©2024 JestersClub.DEV All rights reserved. This website is hosted by GitHub.</p>
         </div>
         <div class="footer-right">
-            <p>All rights reserved. Website hosted by GitHub.</p>
-            <img src="https://via.placeholder.com/24x24?text=18+" alt="Mature Content Warning">
+            <div class="mature-content-sign">Mature Content</div>
         </div>
     </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
