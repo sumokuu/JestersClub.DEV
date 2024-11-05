@@ -311,6 +311,17 @@ header {
     color: #3a1c00;
     padding: 0 20px;
 }
+.game-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.game-info {
+    flex: 2;
+    color: #3a1c00;
+    padding: 0 20px;
+}
 
 .game-info h3 {
     font-size: 1.8rem;
@@ -345,13 +356,13 @@ header {
 }
 
 /* Patreon Link */
-.available-on a {
+.OMA-available-on a {
     color: #be0000;
     text-decoration: none;
     font-weight: bold;
 }
 
-.available-on a:hover {
+.OMA-available-on a:hover {
     text-decoration: underline;
 }
 
@@ -370,6 +381,147 @@ header {
         justify-content: center;
     }
 }
+
+
+
+
+/* Individual Game Entry Styling */
+.game-entry2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    padding: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.game-entry2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('IMAGE gallery/GAMES-BG-2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+    opacity: 0.7;
+}
+
+/* Content Over Background */
+.game-entry2 > * {
+    position: relative;
+    z-index: 2;
+}
+
+.game-image2 {
+    flex: 1;
+    padding: 10px;
+}
+
+.game-image2 img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+/* Patreon Link */
+.GOC-available-on  {
+    font-size: large;
+    margin: 50px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.GOC-available-on a {
+
+    margin: 50px;
+    color: #F96854;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: large;
+}
+
+.GOC-available-on a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .game-entry {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .game-image {
+        margin-bottom: 20px;
+    }
+
+    .available-on {
+        justify-content: center;
+    }
+}
+
+
+
+
+
+
+
+.fanbase-section {
+    font-family: "League Spartan", sans-serif;
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f5e9ce; /* Background color similar to screenshot */
+}
+.fanbase-content  {
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+
+.fanbase-content h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #3a1c00; /* Title color */
+    margin-bottom: 20px;
+}
+
+
+.fanbase-content h3 {
+    line-height: 1.8;
+    padding: 30px 10%;
+
+}
+
+.fanbase-icons {
+    max-width: 30%;
+    height: auto;
+    display: flex;
+    gap: 30px;
+}
+
+.fanbase-icons img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px; /* Optional: adds rounded corners */
+}
+
+
+
+
+
+
 
 
 

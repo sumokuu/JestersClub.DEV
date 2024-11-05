@@ -1,5 +1,5 @@
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded'), () => {
         // Smooth Scroll for Logo Link
         document.querySelector('.logo-link').addEventListener('click', function (e) {
             e.preventDefault(); // Prevent default anchor click behavior
@@ -14,9 +14,10 @@
             if (landing) {
                 // Check if the user has scrolled past half the landing section
                 if (window.scrollY > landing.offsetHeight / 2) {
-                    landing.classList.add('slide-up');
-                } else {
-                    landing.classList.remove('slide-up');
+                    landing.classList.add('slide-up')
+                }
+                else {
+                    landing.classList.remove('slide-up')
                 }
             }
         });
@@ -43,5 +44,5 @@
                 entry.style.backgroundPosition = 'center';
             }
         });
-    });
+    };
 </script>
