@@ -12,6 +12,8 @@ body, html {
 }
 
 header {
+    font-family: "League Spartan", sans-serif;
+    font-weight: bold;
     position: fixed;
     top: 0;
     left: 0;
@@ -29,7 +31,7 @@ header {
 
 /* Right-side container for links and icons */
 .header-right {
-    display: flex;
+    display:flex;
     align-items: center;
     gap: 20px; /* Space between nav links and icons */
 }
@@ -92,11 +94,16 @@ header {
     transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+.logo-text-image {
+    height: auto; /* Set the height to control the logo size */
+    width: auto;  /* Maintain the aspect ratio */
+    max-width: 200px;
+    margin: 0%; /* Optional max-width to prevent it from getting too wide */
 }
 
+.logo-link {
+    margin-right: auto; /* Pushes the logo to the left */
+}
 .header-icons {
     display: flex;
     align-items: center;
@@ -119,9 +126,9 @@ header {
 }
 
 .anim {
-    background: url('IMAGE\ GALLERY/Background anim.png') no-repeat center center;
+    background: url('IMAGE GALLERY/VidosanstitreRaliseavecClipchamponline-video-cutter.com-ezgif.com-video-to-gif-converter.gif') no-repeat center center;
     background-size: cover;
-    display: flex;
+    display:flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -129,6 +136,8 @@ header {
     text-align: center;
     transition: transform 1s ease;
     position: relative;
+    image-rendering: pixelated; /* Ensures pixelated scaling */
+    image-rendering: crisp-edges; /* Alternate for certain browsers */
 }
 
 
@@ -149,107 +158,376 @@ header {
 
 
 
-.landing {
+
+
+
+
+
+/* Landing section styling */
+#landing-section {
+    height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 100vh;
-    background: #ff6666;
-    color: #fff;
+    align-items: center;
+    background-image: url('IMAGE GALLERY/anim1.gif'); /* Path to your GIF */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: #CED69C; /* Light green color as in the image */
+    overflow: hidden;
+    
+}
+
+/* Centered content styling */
+#landing-section .content {
     text-align: center;
+    z-index: 2;
 }
 
-.landing-content {
-    animation: fadeIn 1.5s ease-in-out;
+/* Title styling */
+#landing-section .title {
+    font-family: "Playfair Display", serif;
+    font-size: 3rem;
+    margin: 0;
+    text-transform: uppercase;
 }
 
-.pixel-animation {
-    margin-top: 1rem;
-    font-size: 1.2rem;
+/* Subtitle styling */
+#landing-section .subtitle {
+    font-family: "League Spartan", sans-serif;
+    font-size: 1.5rem;
+    color: #FF0000; /* Red color for the subtitle */
+    margin: 10px 0 20px 0;
 }
 
-button {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    margin-top: 1rem;
-    background: #000;
-    color: #fff;
+/* Learn More button styling */
+#landing-section .learn-more {
+    padding: 10px 20px;
+    background-color: #CFE098; /* Initial button color */
+    color: #000;
     border: none;
+    font-family: "League Spartan", sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s ease;
+    border-radius: 0; /* Remove border radius for sharp edges */
+    transition: background-color 0.3s ease; /* Smooth color transition on hover */
 }
 
-button:hover {
-    background: #333;
+/* Hover effect for the button */
+#landing-section .learn-more:hover {
+    background-color: #BE0000; /* Hover color matches the "INCOMING..." text */
+    color: #FFF; /* Change text color to white for contrast */
 }
 
-.games-section, .about-section {
-    height: 100vh;
+
+/* Add a spotlight effect */
+#landing-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.8) 100%);
+    z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+/* Games Section Styling */
+#games {
+    font-family: "League Spartan", sans-serif;
+    background-color: #f5e9ce;
+    padding: 50px 5%;
+}
+
+#games h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: bold;
+    color: #3a1c00;
+}
+
+
+/* Individual Game Entry Styling */
+.game-entry {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    padding: 2rem;
-    color: #333;
+    margin-bottom: 50px;
+    padding: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
 }
 
-.games-section {
-    background: #ede8e2;
+
+.game-entry::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('IMAGE gallery/GAMES-BG-1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+    opacity: 0.7;
 }
 
-.about-section {
-    background: #5a4033;
-    color: #fff;
+/* Content Over Background */
+.game-entry > * {
+    position: relative;
+    z-index: 2;
 }
 
-.game-showcase {
-    display: flex;
-    align-items: center;
-    margin-top: 2rem;
+.game-image {
+    flex: 1;
+    padding: 10px;
 }
 
-.game-banner {
-    width: 150px;
-    height: 150px;
-    margin-right: 1rem;
+.game-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
 .game-info {
-    max-width: 600px;
+    flex: 2;
+    color: #3a1c00;
+    padding: 0 20px;
+}
+
+.game-info h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.game-info p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+/* Available Platforms Section */
+.available-on {
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+}
+
+.OMA-available-on img {
+    width: 180px;
+    height: auto;
+    padding: 5px;
+    transition: transform 0.3s ease; 
+}
+.OMA-available-on img:hover {
+
+    transform: scale(1.05);
+}
+
+/* Patreon Link */
+.available-on a {
+    color: #be0000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.available-on a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .game-entry {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .game-image {
+        margin-bottom: 20px;
+    }
+
+    .available-on {
+        justify-content: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* About Section Styling */
+.about-section {
+    font-family: "League Spartan", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 10%;
+    background-color: #f5e9ce; /* Background color similar to screenshot */
 }
 
 .about-content {
-    display: flex;
-    align-items: center;
-    margin-top: 2rem;
+    max-width: 60%;
+    color: #000; /* Text color */
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #3a1c00; /* Title color */
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+.about-content h3 {
+    line-height: 1.8;
+    padding: 30px 10%;
+    text-align: left;
 }
 
 .about-image {
-    width: 150px;
-    height: 150px;
-    margin-left: 1rem;
-    border-radius: 5px;
+    max-width: 35%;
+    display: flex;
+    justify-content: flex-end;
 }
 
-footer {
+.about-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px; /* Optional: adds rounded corners */
+}
+
+
+
+
+
+
+
+
+
+/* Footer Styling */
+#footer {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    background: #3b0d0d;
-    color: #ffcc00;
+    justify-content: space-between;
+    padding: 20px 5%;
+    background-color: #1C0000;
+    color: #f8de7e;
+    font-family: Arial, sans-serif;
     font-size: 0.9rem;
 }
 
-.footer-icons .icon {
-    margin: 0 0.5rem;
+/* Logo Section */
+.footer-logo img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
 }
 
-.mature-content-sign {
-    background: #000;
-    color: #ffcc00;
-    padding: 0.2rem 0.5rem;
-    border-radius: 3px;
+/* Navigation Links */
+.footer-nav {
+    display: flex;
+    gap: 30px;
 }
+
+.footer-nav a {
+    color: #f8de7e;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+.footer-nav a:hover::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #f8de7e;
+    bottom: -2px;
+    left: 0;
+}
+
+
+
+.footer-1 {
+    display: grid;
+    margin: 30px;
+    margin-right: auto;
+}
+.footer-2 {
+    display: flex;
+    margin: 10px;
+    padding-bottom: 10%;
+    
+
+}
+.footer-1 p {
+    color: #614444;
+    font-size: 0.8rem;
+}
+
+.footer-nav{
+    margin-right: auto;
+}
+
+
+/* Social Media Icons */
+.footer-social-icons {
+    display: flex;
+    gap: 15px;
+    margin-left: auto;
+
+
+}
+
+.footer-social img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(1.2); /* Adjusts brightness for visibility */
+    transition: filter 0.3s;
+}
+
+.footer-social img:hover {
+    filter: brightness(1.5);
+}
+
+.footer-esrb {
+    padding: 30px;
+}
+.footer-esrb img {
+    width: 200px;
+    height: auto;
+    margin-left: auto;
+}
+
+
 
 @keyframes fadeIn {
     from { opacity: 0; }

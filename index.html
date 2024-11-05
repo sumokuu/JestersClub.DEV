@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JestersClub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
@@ -11,25 +17,28 @@
 <body>
     <!-- Header -->
     <header>
-        <div class="logo">JestersClub.DEV</div>
+        <a href="#main" class="logo-link">
+            <img src="IMAGE GALLERY/LOGO TEXT.png" alt="Logo Text" class="logo-text-image">
+        </a>
 
     <!-- Wrap the navigation and social media icons in a container -->
     <div class="header-right">
+
         <nav class="header-links">
             <ul>
-                <li><a href="#about">About</a></li>
                 <li><a href="#games">Games</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         
         <!-- Social media icons -->
         <div class="social-media-icons">
-            <a href="https://discord.com" target="_blank" class="fab fa-discord"></a>
-            <a href="https://www.patreon.com" target="_blank" class="fab fa-patreon"></a>
-            <a href="https://www.furaffinity.net" target="_blank" class="fa fa-paw"></a>
-            <a href="https://github.com" target="_blank" class="fab fa-github"></a>
-            <a href="mailto:example@example.com" class="fas fa-envelope"></a>
+            <a href="https://discord.gg/kmruCND7X2" target="_blank" class="fab fa-discord"></a>
+            <a href="https://patreon.com/user?u=122405288&utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=creatorshare_fan&utm_content=join_link" target="_blank" class="fab fa-patreon"></a>
+            <a href="https://www.furaffinity.net/user/jestersclub.dev" target="_blank" class="fa fa-paw"></a>
+            <a href="https://github.com/FlyiingSalmon" target="_blank" class="fab fa-github"></a>
+            <a href="mailto:jestersclub.contact@gmail.com" class="fas fa-envelope"></a>
         </div>
         <div class="language-toggle">
             <select name="language" id="language">
@@ -43,68 +52,133 @@
 
 
         <!-- anim Page -->
-        <section class="anim">
-            <div class="anim-content">
-                <img src="IMAGE GALLERY/LOGO BIG.gif" alt="Animated Center Image" class="animated-image">
-            </div>
-        </section>
-
-
-    <!-- Landing Page -->
-    <section class="landing">
-        <div class="landing-content">
-            <h1>Memeventure Paradox</h1>
-            <p>INCOMING...</p>
-            <button onclick="location.href='details.html'">Read More</button>
-            <div class="pixel-animation">[Pixel Animation Placeholder]</div>
+    <section id="main" class="anim">
+        <div class="anim-content">
+            <img src="IMAGE GALLERY/LOGO BIG.gif" alt="Animated Center Image" class="animated-image">
         </div>
     </section>
 
-    <!-- Games Section -->
-    <section class="games-section">
-        <h2>Our Games</h2>
-        <div class="game-showcase">
-            <img src="game-banner.jpg" alt="Orquette's Maze Adventures" class="game-banner">
+
+    <!-- Landing Page -->
+    <section id="landing-section">
+        <div class="content">
+            <h1 class="title">Memeventure Paradox</h1>
+            <h2 class="subtitle">INCOMING...</h2>
+            <button class="learn-more" onclick="window.location.href='memeventure-paradox.html'">LEARN MORE
+            </button>
+        </div>
+    </section>
+    
+
+    <section id="games">
+        <h2>Our games</h2>
+    
+        <!-- Game Entry 1 -->
+        <div class="game-entry" data-bg="IMAGE GALLERY\GAMES-BG-1.png">
+            <div class="game-image">
+                <img src="IMAGE GALLERY\BANNER 4x4x.png" alt="Orquette's Maze Adventure">
+            </div>
             <div class="game-info">
-                <h3>Orquette's Maze Adventures</h3>
+                <h3>Orquette's Maze Adventure</h3>
                 <p>
-                    Once home to a majestic octopus who tragically lost his tentacles in mysterious mazes. The hero's job is to restore what was lost.
+                    Once home to a majestic octopus who tragically lost his tentacles in the mysterious mazes scattered throughout the aquarium, Orquette, the aquarium owner, now awaits a hero to restore what was lost.
+                    <br><br>
+                    Solve the mazes, each more challenging than the last. For every maze you solve, you retrieve a lost tentacle. Orquette rewards your efforts with playful and slightly naughty interactions that will leave you eager for more.
                 </p>
-                <div class="game-links">
-                    <a href="https://store.steampowered.com" target="_blank">Steam</a>
-                    <a href="https://store.playstation.com" target="_blank">PlayStation Store</a>
+                <div class="OMA-available-on">
+                    <p>Available on</p>
+                    <a href="https://jestersclubdev.itch.io/orquettes-maze-adventure" target="_blank"><img src="IMAGE GALLERY\itch-io badge.png" alt="itchio" ></a>
+                    <a href="https://www.newgrounds.com/portal/view/937996" target="_blank"> <img src="IMAGE GALLERY\newgrounds badge.png" alt="newgrounds" ></a>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Game Entry 2 -->
+        <div class="game-entry" data-bg="IMAGE GALLERY\GAMES-BG-2.png">
+            <div class="game-image">
+                <img src="IMAGE GALLERY\BANNER 4x4.png" alt="Girls on Cam">
+            </div>
+            <div class="game-info">
+                <h3>Girls on Cam</h3>
+                    <p>text ur crush :B 
+                    </p>
+                <div class="GOC-available-on">
+                    <p>INCOMING!</p>
+                    <a href="https://patreon.com" target="_blank">Follow on Patreon</a>
                 </div>
             </div>
         </div>
     </section>
+    
 
+
+      
     <!-- About Section -->
-    <section class="about-section">
-        <h2>Who are we?</h2>
+    <section id="about" class="about-section">
         <div class="about-content">
+            <h2>Who are we?</h2>
             <p>
-                We are JestersClub, a dedicated team passionate about creating unique and memorable games for our audience. 
+                the company was born when the lead developer, Flying Salmon, was unemployed and had a lot of
+                free time for leisure. one night, I had a dream and decided to transform it into a video game, "Memeventure Paradox". the story of the game is 
+               random. if it makes me laugh, then I implement it. the game world is a form of escapism for me. sometimes, I put myself in the shoes of the characters.
             </p>
-            <img src="about-image.jpg" alt="About Us" class="about-image">
+            <h3>Thanks to the team for putting so much efforts into creating the games.</h3>
         </div>
+        <div class="about-image">
+            <img src="IMAGE GALLERY\08358a4ce90277928964fcf749b129fc.jpg" alt="About Image">
+        </div>
+        </section>
+
     </section>
+    
+
+
+
+
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-left">
-            <div class="footer-icons">
-                <a href="https://discord.com" target="_blank" class="icon discord"></a>
-                <a href="https://patreon.com" target="_blank" class="icon patreon"></a>
-                <a href="https://furaffinity.net" target="_blank" class="icon furaffinity"></a>
-                <a href="https://github.com" target="_blank" class="icon github"></a>
-                <a href="mailto:someone@example.com" class="icon email"></a>
-            </div>
-            <p>©2024 JestersClub.DEV All rights reserved. This website is hosted by GitHub.</p>
+    <footer id="footer">
+        <!-- Logo Section -->
+        <div class="footer-logo">
+            <img src="IMAGE GALLERY/logo small.png" alt="Jesters Club Logo">
         </div>
-        <div class="footer-right">
-            <div class="mature-content-sign">Mature Content</div>
+
+        <div class="footer-1">
+
+            <div class="footer-2">
+
+                <nav class="footer-nav">
+                    <a href="#games">Games</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#privacy">Privacy</a>
+                </nav>
+
+
+            </div>
+
+            <p>&copy;2024 JestersClub.DEV All rights reserved<br>
+                This website is hosted by GitHub</p>
+        </div>
+        <div class="social-media-icons">
+            <a href="https://discord.gg/kmruCND7X2" target="_blank" class="fab fa-discord"></a>
+            <a href="https://patreon.com/user?u=122405288&utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=creatorshare_fan&utm_content=join_link" target="_blank" class="fab fa-patreon"></a>
+            <a href="https://www.furaffinity.net/user/jestersclub.dev" target="_blank" class="fa fa-paw"></a>
+            <a href="https://github.com/FlyiingSalmon" target="_blank" class="fab fa-github"></a>
+            <a href="mailto:jestersclub.contact@gmail.com" class="fas fa-envelope"></a>
+        </div>
+
+
+        <!-- ESRB Rating and Copyright -->
+        <div class="footer-esrb">
+            <img src="IMAGE GALLERY/ESRB logo.png"> 
         </div>
     </footer>
+
+
+
+
+
     <script src="script.js"></script>
 </body>
 </html>

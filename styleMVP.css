@@ -1,0 +1,90 @@
+/* Base styling for memeventure-paradox.html */
+body {
+    background-color: #121212;
+    color: #CFE098;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Game Presentation Section */
+#game-presentation {
+    padding: 50px;
+    text-align: center;
+}
+
+#game-presentation h1 {
+    font-size: 2.5rem;
+    color: #FFD86D;
+}
+
+#game-presentation p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+/* Screenshots Gallery Section */
+#screenshots-gallery {
+    padding: 50px;
+    text-align: center;
+}
+
+#screenshots-gallery h2 {
+    font-size: 2rem;
+    color: #FFD86D;
+    margin-bottom: 30px;
+}
+
+.gallery {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 200px;
+    height: auto;
+    border: 2px solid #FFD86D;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Follow-Up Section */
+#follow-up {
+    padding: 50px;
+    text-align: center;
+    background-color: #222222;
+}
+
+#follow-up h2 {
+    font-size: 2rem;
+    color: #FFD86D;
+}
+
+#follow-up p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: auto;
+    color: #CFE098;
+}
+
+#follow-up a {
+    color: #FFD86D;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#follow-up a:hover {
+    color: #BE0000;
+    text-decoration: underline;
+}
+
+/* Style the header and footer links (inherited from main CSS) */
+.header-content, .footer-left, .footer-right {
+    justify-content: flex-end;
+}
