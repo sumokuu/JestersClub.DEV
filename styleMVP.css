@@ -1,15 +1,146 @@
 /* Base styling for memeventure-paradox.html */
-body {
+body, html {
     background-color: #121212;
     color: #CFE098;
     font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    font-family: "League Spartan", sans-serif;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: #3b0d0d;
+    color: #ffcc00;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Right-side container for links and icons */
+.header-right {
+    display:flex;
+    align-items: center;
+    gap: 20px; /* Space between nav links and icons */
+}
+
+
+/* Language toggle container styling */
+.language-toggle {
+    margin-left: 20px; /* Space between social media icons and the language toggle */
+}
+
+/* Styling for the language select dropdown */
+.language-toggle select {
+    background-color: #3b0d0d; /* Match header background */
+    color: #FFD86D; /* Text color */
+    border: 1px solid #FFD86D; /* Border color to match theme */
+    padding: 5px 10px; /* Padding for the dropdown */
+    font-size: 1rem; /* Font size */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.2s ease, border-color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Hover and focus effects for select dropdown */
+.language-toggle select:hover, .language-toggle select:focus {
+    border-color: #ffa500; /* Border color on hover/focus */
+    transform: scale(1.05); /* Slightly enlarge on hover/focus */
+}
+
+/* Optional: Adjust font size and alignment in the header */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between each element in the header-right container */
+}
+
+
+
+
+/* Header navigation links styling */
+.header-links ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header-links ul li {
+    margin-left: 20px;
+}
+
+.header-links ul li a {
+    color: #FFD86D; /* Link color */
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: transform 0.2s ease, color 0.3s ease; /* Smooth scaling on hover */
+}
+
+.header-links ul li a:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.logo-text-image {
+    height: auto; /* Set the height to control the logo size */
+    width: auto;  /* Maintain the aspect ratio */
+    max-width: 200px;
+    margin: 0%; /* Optional max-width to prevent it from getting too wide */
+}
+
+.logo-link {
+    margin-right: auto; /* Pushes the logo to the left */
+}
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.social-media-icons a {
+    color: #FFD86D; /* Icon color */
+    margin-left: 15px; /* Space between icons */
+    font-size: 1.5rem; /* Icon size */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-media-icons a:hover {
+    color: #ffa500; /* Change color on hover */
+}
+
+.language-toggle {
+    margin-left: 1rem;
+}
+
+
+
+
+
 
 /* Game Presentation Section */
 #game-presentation {
+    font-family: "Playfair Display", serif;
     padding: 50px;
+    margin-top: 70px;
     text-align: center;
+    background: linear-gradient(to top, #272727, #000000); /* Gradient from bottom to top */
+    background-size: 100% 200%; /* Double the height to allow for animation */
+
 }
+
 
 #game-presentation h1 {
     font-size: 2.5rem;
@@ -18,9 +149,7 @@ body {
 
 #game-presentation p {
     font-size: 1.2rem;
-    margin: 20px 0;
-    max-width: 600px;
-    margin: auto;
+    margin: 50px;
     line-height: 1.6;
 }
 
@@ -44,47 +173,278 @@ body {
 }
 
 .gallery img {
-    width: 200px;
+    width: 400px;
     height: auto;
-    border: 2px solid #FFD86D;
     transition: transform 0.3s ease;
 }
 
 .gallery img:hover {
+    transform: scale(1.5);
+
+}
+
+
+
+
+#fanbase {
+    font-family: "League Spartan", sans-serif;
+    background-color: #222222;
+    padding: 50px 5%;
+    display: block;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fanbase-content  {
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.fanbase-content h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #FFD86D;
+    margin-bottom: 20px;
+}
+
+
+.fanbase-content h3 {
+    line-height: 1.8;
+    padding: 30px 10%;
+
+}
+
+.fanbase-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.fanbase-icons img {
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px; 
+    transition: transform 0.3s ease; 
+}
+.fanbase-icons img:hover {
+
     transform: scale(1.05);
 }
+@media (max-width: 768px) {
+    .fanbase-icons {
+        display:column;
+        margin: 20px;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+    }
+    .fanbase-icons img {
+        max-width: 200px;
 
-/* Follow-Up Section */
-#follow-up {
-    padding: 50px;
-    text-align: center;
-    background-color: #222222;
+        display: block;
+        height: auto;
+        object-fit: cover;
+        border-radius: 4px; 
+        transition: transform 0.3s ease; 
+    }
+    
 }
 
-#follow-up h2 {
-    font-size: 2rem;
-    color: #FFD86D;
+
+
+
+
+
+
+
+
+#footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 5%;
+    background-color: #1C0000;
+    color: #f8de7e;
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
 }
 
-#follow-up p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: auto;
-    color: #CFE098;
+/* Logo Section */
+.footer-logo img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
 }
 
-#follow-up a {
-    color: #FFD86D;
+/* Navigation Links */
+.footer-nav {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-nav a {
+    color: #f8de7e;
     text-decoration: none;
     font-weight: bold;
+    position: relative;
 }
 
-#follow-up a:hover {
-    color: #BE0000;
-    text-decoration: underline;
+.footer-nav a:hover::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #f8de7e;
+    bottom: -2px;
+    left: 0;
 }
 
-/* Style the header and footer links (inherited from main CSS) */
-.header-content, .footer-left, .footer-right {
-    justify-content: flex-end;
+
+
+.footer-1 {
+    display: grid;
+    margin: 30px;
+    margin-right: auto;
+}
+.footer-2 {
+    display: flex;
+    margin: 10px;
+    padding-bottom: 10%;
+    
+
+}
+.footer-1 p {
+    color: #614444;
+    font-size: 0.8rem;
+}
+
+.footer-nav{
+    margin-right: auto;
+}
+
+
+/* Social Media Icons */
+.footer-social-media-icons {
+    display: flex;
+    gap: 15px;
+    margin-left: 15px; /* Space between icons */
+    font-size: 1.5rem; /* Icon size */
+    transition: color 0.3s ease;
+}
+
+.footer-social-media-icons a {
+    color: #FFD86D;
+    text-decoration: none;
+    width: 24px;
+    height: 24px;/* Adjusts brightness for visibility */
+    transition: filter 0.3s;
+}
+
+.footer-social-media-icons a:hover {
+    filter: brightness(1.5);
+}
+
+.footer-esrb {
+    padding: 30px;
+}
+.footer-esrb img {
+    width: 200px;
+    height: auto;
+    margin-left: auto;
+}
+
+
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .gallery img:hover {
+        transform:none;
+    
+    }
+    #game-presentation p {
+        font-size: 1rem;
+        margin: 10px;
+        line-height: 1.5;
+        text-align: left;
+    }
+    
+    .navbar__toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+    /* Header adjustments */
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo-text-image {
+        height: auto;
+        width: 200px;
+    }
+
+    .header-links  {
+        display: none; /* Hidden initially, shown when menu toggled */
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        padding: 10px 0;
+        background-color: #444;
+    }
+     .social-media-icons {
+        display: none; /* Hidden initially, shown when menu toggled */
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        padding: 10px 0;
+        background-color: #444;
+    }
+
+    .menu-toggle {
+        display: block; /* Show menu button on mobile */
+    }
+
+    .menu-toggle.active + .header-links {
+        display: flex;
+    }
+
+    /* Footer adjustments */
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+
+
+    .footer-1 {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .footer-nav a {
+        display: none; 
+    }
+
+    .footer-social-media-icons {
+        flex-direction:column;
+        justify-content: flex-start;
+    }
+
+    .footer-esrb img {
+        clip-path: inset(0px 146px 0px 0px);
+    }
 }

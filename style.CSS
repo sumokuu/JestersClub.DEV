@@ -122,8 +122,116 @@ header {
 }
 
 .language-toggle {
-    margin-left: 1rem;
+    margin: 1rem;
 }
+
+.menu-toggle {
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+
+@media (max-width: 768px) {
+    .navbar__toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+    /* Header adjustments */
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo-text-image {
+        height: auto;
+        width: 200px;
+    }
+
+    .header-links  {
+        display: none; /* Hidden initially, shown when menu toggled */
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        padding: 10px 0;
+        background-color: #444;
+    }
+     .social-media-icons {
+        display: none; /* Hidden initially, shown when menu toggled */
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        padding: 10px 0;
+        background-color: #444;
+    }
+
+    .menu-toggle {
+        display: block; /* Show menu button on mobile */
+    }
+
+    .menu-toggle.active + .header-links {
+        display: flex;
+    }
+
+    /* Footer adjustments */
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .footer-logo img {
+        height: 30px;
+    }
+
+    .footer-1 {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .footer-nav a {
+        display: none; 
+    }
+
+    .footer-social-media-icons {
+        flex-direction:column;
+        justify-content: flex-start;
+    }
+
+    .footer-esrb img {
+
+        clip-path: inset(0px 146px 0px 0px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .anim {
     background: url('IMAGE GALLERY/VidosanstitreRaliseavecClipchamponline-video-cutter.com-ezgif.com-video-to-gif-converter.gif') no-repeat center center;
@@ -300,17 +408,8 @@ header {
     padding: 10px;
 }
 
-.game-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
 
-.game-info {
-    flex: 2;
-    color: #3a1c00;
-    padding: 0 20px;
-}
+
 .game-image img {
     width: 100%;
     height: auto;
@@ -337,7 +436,6 @@ header {
 
 /* Available Platforms Section */
 .available-on {
-
     display: flex;
     align-items: center;
     gap: 10px;
@@ -435,18 +533,17 @@ header {
 
 /* Patreon Link */
 .GOC-available-on  {
-    font-size: large;
+
     margin: 50px;
     text-decoration: none;
     font-weight: bold;
 }
 .GOC-available-on a {
-
     margin: 50px;
     color: #F96854;
     text-decoration: none;
     font-weight: bold;
-    font-size: large;
+    font-size:2rem;
 }
 
 .GOC-available-on a:hover {
@@ -467,6 +564,18 @@ header {
     .available-on {
         justify-content: center;
     }
+    .game-entry2 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .game-image2 {
+        margin-bottom: 20px;
+    }
+
+    .available-on2 {
+        justify-content: center;
+    }
 }
 
 
@@ -474,17 +583,19 @@ header {
 
 
 
-
-.fanbase-section {
+#fanbase {
     font-family: "League Spartan", sans-serif;
+    background-color: #f5e9ce;
+    padding: 50px 5%;
     display: block;
     align-items: center;
     justify-content: space-between;
-    background-color: #f5e9ce; /* Background color similar to screenshot */
 }
+
 .fanbase-content  {
+
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     text-align: center;
 }
 
@@ -492,7 +603,7 @@ header {
 .fanbase-content h2 {
     font-size: 2.5rem;
     font-weight: bold;
-    color: #3a1c00; /* Title color */
+    color: #3a1c00;
     margin-bottom: 20px;
 }
 
@@ -504,19 +615,43 @@ header {
 }
 
 .fanbase-icons {
-    max-width: 30%;
-    height: auto;
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 30px;
 }
 
 .fanbase-icons img {
-    width: 100%;
+    max-width: 300px;
     height: auto;
     object-fit: cover;
-    border-radius: 4px; /* Optional: adds rounded corners */
+    border-radius: 4px; 
+    transition: transform 0.3s ease; 
+}
+.fanbase-icons img:hover {
+
+    transform: scale(1.05);
 }
 
+@media (max-width: 768px) {
+    .fanbase-icons {
+        display:column;
+        margin: 20px;
+        align-items: center;
+        justify-content: center;
+        gap: 2px;
+    }
+    .fanbase-icons img {
+        max-width: 200px;
+
+        display: block;
+        height: auto;
+        object-fit: cover;
+        border-radius: 4px; 
+        transition: transform 0.3s ease; 
+    }
+    
+}
 
 
 
@@ -570,12 +705,25 @@ header {
 }
 
 .about-image img {
-    width: 100%;
+    width: 300px;
+    image-rendering: pixelated; /* Ensures pixelated scaling */
+    image-rendering: crisp-edges;
     height: auto;
     object-fit: cover;
     border-radius: 8px; /* Optional: adds rounded corners */
 }
 
+@media (max-width: 768px) {
+    .about-content p {
+        line-height: 1.1;
+        font-size: 1rem;
+        padding-right:10px ;
+    }
+    .about-content h3 {
+        line-height: 1.1;  
+        text-align: center;
+    }
+}
 
 
 
@@ -651,22 +799,23 @@ header {
 
 
 /* Social Media Icons */
-.footer-social-icons {
+.footer-social-media-icons {
     display: flex;
     gap: 15px;
-    margin-left: auto;
-
-
+    margin-left: 15px; /* Space between icons */
+    font-size: 1.5rem; /* Icon size */
+    transition: color 0.3s ease;
 }
 
-.footer-social img {
+.footer-social-media-icons a {
+    color: #FFD86D;
+    text-decoration: none;
     width: 24px;
-    height: 24px;
-    filter: brightness(1.2); /* Adjusts brightness for visibility */
+    height: 24px;/* Adjusts brightness for visibility */
     transition: filter 0.3s;
 }
 
-.footer-social img:hover {
+.footer-social-media-icons a:hover {
     filter: brightness(1.5);
 }
 

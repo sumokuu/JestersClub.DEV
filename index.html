@@ -11,8 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="IMAGE GALLERY/spades_icon-icons.com_70867.png" type="image/x-icon">
 </head>
 <body>
     <!-- Header -->
@@ -21,33 +21,27 @@
             <img src="IMAGE GALLERY/LOGO TEXT.png" alt="Logo Text" class="logo-text-image">
         </a>
 
-    <!-- Wrap the navigation and social media icons in a container -->
+        <!-- Wrap the navigation and social media icons in a container -->
     <div class="header-right">
 
-        <nav class="header-links">
-            <ul>
-                <li><a href="#games">Games</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        
-        <!-- Social media icons -->
-        <div class="social-media-icons">
-            <a href="https://discord.gg/kmruCND7X2" target="_blank" class="fab fa-discord"></a>
-            <a href="https://patreon.com/user?u=122405288&utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=creatorshare_fan&utm_content=join_link" target="_blank" class="fab fa-patreon"></a>
-            <a href="https://www.furaffinity.net/user/jestersclub.dev" target="_blank" class="fa fa-paw"></a>
-            <a href="https://github.com/FlyiingSalmon" target="_blank" class="fab fa-github"></a>
-            <a href="mailto:jestersclub.contact@gmail.com" class="fas fa-envelope"></a>
-        </div>
-        <div class="language-toggle">
-            <select name="language" id="language">
-                <option value="en">English</option>
-                <option value="fr">Français</option>
-            </select>
-        </div>
-    </div>
+            <nav class="header-links">
+                <ul>
+                    <li><a href="#games">Games</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <!-- Social media icons -->
+            <div class="social-media-icons">
+                <a href="https://discord.gg/kmruCND7X2" target="_blank" class="fab fa-discord"></a>
+                <a href="https://patreon.com/user?u=122405288&utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=creatorshare_fan&utm_content=join_link" target="_blank" class="fab fa-patreon"></a>
+                <a href="https://www.furaffinity.net/user/jestersclub.dev" target="_blank" class="fa fa-paw"></a>
+                <a href="https://github.com/FlyiingSalmon" target="_blank" class="fab fa-github"></a>
+                <a href="mailto:jestersclub.contact@gmail.com" class="fas fa-envelope"></a>
+            </div>
 
+        </div>
     </header>
 
 
@@ -144,7 +138,7 @@
             <h3>Thanks to the team for putting so much efforts into creating the games.</h3>
         </div>
         <div class="about-image">
-            <img src="IMAGE GALLERY\08358a4ce90277928964fcf749b129fc.jpg" alt="About Image">
+            <img src="IMAGE GALLERY/dogmanIdle.png" alt="About Image">
         </div>
 
     </section>
@@ -178,7 +172,7 @@
             <p>&copy;2024 JestersClub.DEV All rights reserved<br>
                 This website is hosted by GitHub</p>
         </div>
-        <div class="social-media-icons">
+        <div class="footer-social-media-icons">
             <a href="https://discord.gg/kmruCND7X2" target="_blank" class="fab fa-discord"></a>
             <a href="https://patreon.com/user?u=122405288&utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=creatorshare_fan&utm_content=join_link" target="_blank" class="fab fa-patreon"></a>
             <a href="https://www.furaffinity.net/user/jestersclub.dev" target="_blank" class="fa fa-paw"></a>
@@ -197,6 +191,17 @@
 
 
 
-    <script src="script.js"></script>
+    <script>
+const menu = document.querySelector('#mobile-menu');
+const menuLinks = document.querySelector('.navbar__menu');
+
+//DISPLAY MOBILE MENU
+const mobileMenu = () => {
+    menu.classList.toggle('is-active');
+    menuLinks.classList.toggle('active');
+};
+
+menu.addEventListener('click', mobileMenu);
+    </script>
 </body>
 </html>
