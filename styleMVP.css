@@ -155,6 +155,7 @@ header {
 
 /* Screenshots Gallery Section */
 #screenshots-gallery {
+    font-family: "Playfair Display", serif;
     padding: 50px;
     text-align: center;
 }
@@ -166,22 +167,21 @@ header {
 }
 
 .gallery {
-    display: flex;
-    gap: 20px;
+    display: block;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .gallery img {
-    width: 400px;
+    width: 800px;
     height: auto;
-    transition: transform 0.3s ease;
+    margin: 20px;
+}
+.gallery p {
+    font-size: 2rem;
+    margin-bottom: 100px;
 }
 
-.gallery img:hover {
-    transform: scale(1.5);
-
-}
 
 
 
@@ -236,6 +236,18 @@ header {
     transform: scale(1.05);
 }
 @media (max-width: 768px) {
+
+    #screenshots-gallery{
+        padding: 0%;
+        margin: 0%;
+    }
+
+    .gallery img {
+        max-width: 400px;
+        height: auto;
+        margin: 0%;
+    }
+
     .fanbase-icons {
         display:column;
         margin: 20px;
