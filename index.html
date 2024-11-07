@@ -44,6 +44,7 @@
     </header>
 
 
+
         <!-- anim Page -->
     <section id="main" class="anim">
         <div class="anim-content">
@@ -141,7 +142,30 @@
         </div>
 
     </section>
-    
+    <div id="consentBox">
+        <img src=
+"https://media.geeksforgeeks.org/wp-content/uploads/20231115025707/gfg.png"
+             alt="Logo">
+        <div id="consentContent">
+            <header id="consentHeader">
+                  Cookies: The choice is yours
+              </header>
+            <p>
+              We use cookies to make our site work well
+              for you and so we can continually improve it.
+              <br>The cookies that are necessary to 
+              keep the site functioning are always on
+            </p>
+            <div class="buttons">
+                <button class="consentButton">
+                      Accept Cookies
+                  </button>
+                <button class="rejectButton">
+                      Reject
+                  </button>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -196,6 +220,39 @@
   gtag('js', new Date());
 
   gtag('config', 'G-KBWBD3Y4H7');
+
+
+  const consentBox = 
+    document.getElementById("consentBox");
+const acceptBtn = 
+    document.querySelector(".consentButton");
+const rejectBtn = 
+    document.querySelector(".rejectButton");
+
+acceptBtn.onclick = () => {
+    document.cookie = "CookieBy=GeeksForGeeks; max-age="
+        + 60 * 60 * 24;
+    if (document.cookie) {
+        consentBox.classList.add("hide");
+    } else {
+        alert
+            ("Cookie can't be set! Please"+
+              " unblock this site from the cookie"+
+              " setting of your browser.");
+    }
+};
+
+rejectBtn.onclick = () => {
+    alert(
+        "Cookies rejected. Some functionalities may be limited.");
+    consentBox.classList.add("hide");
+};
+
+let checkCookie = 
+    document.cookie.indexOf("CookieBy=GeeksForGeeks");
+checkCookie !== -1 ? consentBox.classList.add("hide") :
+    consentBox.classList.remove("hide");
+
 </script>
 </body>
 </html>
