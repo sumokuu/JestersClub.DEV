@@ -289,7 +289,7 @@ header {
 /* Centered content styling */
 #landing-section .content {
     text-align: center;
-
+    z-index: 2;
 }
 
 /* Title styling */
