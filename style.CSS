@@ -277,7 +277,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('IMAGE GALLERY/anim1.gif'); /* Path to your GIF */
+    background-image: url('IMAGE GALLERY/ANIM1.gif'); /* Path to your GIF */
     background-size: cover;
     background-position: center;
     position: relative;
