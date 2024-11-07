@@ -188,17 +188,14 @@
 
 
 
-    <script>
-const menu = document.querySelector('#mobile-menu');
-const menuLinks = document.querySelector('.navbar__menu');
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KBWBD3Y4H7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-//DISPLAY MOBILE MENU
-const mobileMenu = () => {
-    menu.classList.toggle('is-active');
-    menuLinks.classList.toggle('active');
-};
-
-menu.addEventListener('click', mobileMenu);
-    </script>
+  gtag('config', 'G-KBWBD3Y4H7');
+</script>
 </body>
 </html>
