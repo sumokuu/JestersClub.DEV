@@ -657,6 +657,102 @@ header {
 }
 
 
+.game-entry3 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    padding: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.game-entry3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('IMAGE gallery/GAMES-BG-3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+    opacity: 0.7;
+}
+
+/* Content Over Background */
+.game-entry3 > * {
+    position: relative;
+    z-index: 2;
+}
+
+.game-image2 {
+    flex: 1;
+    padding: 10px;
+}
+
+.game-image2 img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+/* Patreon Link */
+.GOC-available-on  {
+
+    margin: 50px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.GOC-available-on a {
+    margin: 50px;
+    color: #F96854;
+    text-decoration: none;
+    font-weight: bold;
+    font-size:2rem;
+}
+
+.GOC-available-on a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .game-entry {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .game-image {
+        margin-bottom: 20px;
+    }
+
+    .available-on {
+        justify-content: center;
+    }
+    .game-entry3 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .game-image2 {
+        margin-bottom: 20px;
+    }
+
+    .available-on2 {
+        justify-content: center;
+    }
+}
+
+
+
 
 
 
