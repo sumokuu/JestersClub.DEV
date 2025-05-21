@@ -561,6 +561,244 @@ header {
 
 
 
+
+/* Individual Game Entry Styling 
+.game-entry0 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    padding: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.game-entry0::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('IMAGE gallery/GAMES-BG-0.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+    opacity: 0.7;
+}
+
+/* Content Over Background 
+.game-entry0 > * {
+    position: relative;
+    z-index: 2;
+}
+
+.game-image0 {
+    flex: 1;
+    padding: 10px;
+}
+
+.game-image0 img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+/* Patreon Link 
+.TWG-available-on  {
+
+    margin: 50px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.TWG-available-on p {
+    font-size: 40PX;
+
+}
+
+.TWG-available-on {
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px; 
+    transition: transform 0.3s ease; 
+}
+.fanbase-icons img:hover {
+
+    transform: scale(1.05);
+}
+.TWG-available-on a {
+    margin: 50px;
+    color: #F96854;
+    text-decoration: none;
+    font-weight: bold;
+    font-size:1rem;
+}
+
+.TWG-available-on a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design 
+@media (max-width: 768px) {
+    .game-entry0 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .game-image0 {
+        margin-bottom: 20px;
+    }
+
+    .available-on {
+        justify-content: center;
+    }
+    .game-entry0 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .game-image0 {
+        margin-bottom: 20px;
+    }
+
+    .available-on {
+        justify-content: center;
+    }
+}
+
+*/
+
+
+
+
+.game-entry0 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    padding: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.game-entry0::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('IMAGE gallery/GAMES-BG-0.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+    opacity: 0.7;
+}
+
+/* Content Over Background */
+.game-entry0 > * {
+    position: relative;
+    z-index: 2;
+}
+
+.game-image0 {
+    flex: 1;
+    padding: 10px;
+}
+
+.game-image0 img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+/* Patreon Link */
+.OMA-available-on  {
+    margin: 20px;
+    font-weight: bold;
+}
+
+.OMA-available-on a {
+    margin: 50px;
+    color: #F96854;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.available-on-text  {
+    margin: 20px;
+    color: #000000;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+
+.OMA-available-on a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .game-entry0 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .game-image0 {
+        margin-bottom: 20px;
+    }
+
+    .OMA-available-on {
+        justify-content: center;
+    }
+    .game-entry0 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .game-image0 {
+        margin-bottom: 20px;
+    }
+
+    .OMA-available-on {
+        justify-content: center;
+    }
+    .available-on-text  {
+        justify-content: center;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Individual Game Entry Styling */
 .game-entry2 {
     display: flex;
