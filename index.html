@@ -15,10 +15,144 @@
     <link rel="icon" href="IMAGE GALLERY/spades_icon-icons.com_70867.png" type="image/x-icon">
 </head>
 <body>
+<style>
+#cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #222;
+  color: #fff;
+  padding: 15px;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+  font-family: Arial, sans-serif;
+}
+#cookie-banner button {
+  margin-left: 10px;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+}
+.accept-btn { background: #4CAF50; color: white; }
+.reject-btn { background: #f44336; color: white; }
+</style>
+
+<div id="cookie-banner">
+  <div>
+    We use cookies to analyze traffic and improve your experience.
+    See our <a href="privacy-policy2.html" style="color:#4CAF50;">Privacy Policy</a>.
+  </div>
+  <div>
+    <button class="accept-btn" onclick="acceptCookies()">Accept</button>
+    <button class="reject-btn" onclick="rejectCookies()">Reject</button>
+  </div>
+</div>
+
+<script>
+function loadGoogleAnalytics() {
+  var script = document.createElement('script');
+  script.async = true;
+  script.src = "https://www.googletagmanager.com/gtag/js?id=G-K4KP99T40J";
+  document.head.appendChild(script);
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-K4KP99T40J');
+}
+
+function acceptCookies() {
+  localStorage.setItem("cookieConsent", "accepted");
+  document.getElementById("cookie-banner").style.display = "none";
+  loadGoogleAnalytics();
+}
+
+function rejectCookies() {
+  localStorage.setItem("cookieConsent", "rejected");
+  document.getElementById("cookie-banner").style.display = "none";
+}
+
+window.onload = function() {
+  var consent = localStorage.getItem("cookieConsent");
+  if (!consent) {
+    document.getElementById("cookie-banner").style.display = "flex";
+  }
+  if (consent === "accepted") {
+    loadGoogleAnalytics();
+  }
+
+}
+function goFullscreen() {
+    const frame = document.getElementById('game-frame');
+    
+    if (frame.requestFullscreen) {
+        frame.requestFullscreen();
+    } else if (frame.webkitRequestFullscreen) {
+        frame.webkitRequestFullscreen(); // Safari/iOS
+    }
+
+    // Lock to landscape on mobile
+    if (screen.orientation && screen.orientation.lock) {
+        screen.orientation.lock('landscape').catch(() => {});
+    }
+}
+
+// Add back button when fullscreen is active
+document.addEventListener('fullscreenchange', handleFullscreen);
+document.addEventListener('webkitfullscreenchange', handleFullscreen);
+
+function handleFullscreen() {
+    const isFullscreen = document.fullscreenElement || document.webkitFullscreenElement;
+    
+    let backBtn = document.getElementById('back-btn');
+    
+    if (isFullscreen) {
+        if (!backBtn) {
+            backBtn = document.createElement('button');
+            backBtn.id = 'back-btn';
+            backBtn.innerText = '← Back to site';
+            backBtn.style.cssText = `
+                position: fixed;
+                top: 12px;
+                left: 12px;
+                z-index: 9999;
+                padding: 8px 14px;
+                background: rgba(0,0,0,0.6);
+                color: white;
+                border: none;
+                border-radius: 6px;
+                font-size: 14px;
+                cursor: pointer;
+            `;
+            backBtn.onclick = () => {
+                if (document.exitFullscreen) document.exitFullscreen();
+                else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+                if (screen.orientation && screen.orientation.unlock) {
+                    screen.orientation.unlock();
+                }
+            };
+            document.body.appendChild(backBtn);
+        }
+    } else {
+        if (backBtn) backBtn.remove();
+        if (screen.orientation && screen.orientation.unlock) {
+            screen.orientation.unlock();
+        }
+    }
+}
+
+</script>
+
+
+
+
     <!-- Header -->
     <header>
         <a href="#main" class="logo-link">
-            <img src="IMAGE GALLERY/LOGO TEXT.png" alt="Logo Text" class="logo-text-image">
+            <img src="IMAGE GALLERY\NEW LOGO WEBSITE.png" alt="Logo Text" class="logo-text-image">
         </a>
 
         <!-- Wrap the navigation and social media icons in a container -->
@@ -64,6 +198,40 @@
     </section>
     
 
+
+
+
+
+    
+
+    <section class="OGF" id="OGF"> 
+        <h3>TRY OUR NEWEST FREE GAME ON YOUR BROWSER NOW!</h3>
+        <h4>This game is not available for mobile (yet)</h4>
+        <div class="OGF-player">
+            <div class="OGF-player-objects" id="ogf-wrapper">
+                <iframe
+                    id="game-frame"
+                    src="https://sumokuu.github.io/OGF-DRAFT/"
+                    scrolling="no"
+                    allowfullscreen>
+                </iframe>
+                <img src="IMAGE GALLERY/OGF FRAME FINAL.png" class="OGF-frame" alt="OGF frame">
+                <button id="fullscreen-btn" onclick="document.getElementById('game-frame').requestFullscreen()">⛶ Fullscreen</button>
+            </div>
+        </div>
+
+        <p>Enjoyed the game? try the <span style="color: red;">full adult version</span> on Itch.io and download the game!</p>
+        <div class="OGF-available-on">
+            <a href="https://jestersclubdev.itch.io/orquette-and-the-goon-fortress-nsfw" target="_blank"><img src="IMAGE GALLERY\itch-io badge.png" alt="itchio" ></a>
+        </div>
+    </section>         
+
+
+
+
+
+
+
     <section id="games">
         <h2>Our games</h2>
 
@@ -82,7 +250,6 @@
                     <br>And yes, Vasco Sanchez is back again with a killer soundtrack. STAY TUNED!
                 </p>
                <div class="available-on-text">
-                    <p >INCOMING ON JULY 12th</p>
                     <p >FOLLOW UP WITH THE PROGRESS ON PATREON</p>
                 </div>
                 <div class="OMA-available-on">
@@ -157,11 +324,79 @@
     </section>
 
 
+
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+            <img src="IMAGE GALLERY\ABOUT Frame FINAL.png" class="about-frame" alt="About Frame">
+        <div class="about-content"> 
+            <h2>Who are we?</h2>
+            <p>
+                JestersClub.DEV is an independent video game studio founded in 2024 and based in Lyon, France.
+                It was created with the idea of developing short games within the same universe, allowing players to discover characters and their stories throughout the gameplay.
+            </br>
+                As we started from publishing Orquette maze adventure as a joke to many, the success and devotion of our community pushed the developer to create the studio and expend the universe.
+        </br>
+                Currently composed of three team members, Our games are designed to be accessible while bringing a touch of nostalgia through both game mechanics and graphics.
+    </BR>
+                If you've made it far enough to this section of the website, I hope you'll stay long enough to watch the studio grow ;)
+            </BR>
+            </BR>
+            </BR>
+            <span style="float: right;">- Susu</span>
+            </p>
+        </div>
+
+
+    </section>
+ 
+
+
+        <!-- donation Section -->
+    <section id="donations" class="donation-section">
+            <div class="donation-content">
+                <h2>Had a Great Time? <br> Consider Supporting us to Keep This Website Up!</h2>
+                <h3>All the money donated to the studio will be used to speed up the development of the games :) <br> For any inquiries, contact the developer directly through email <a href="mailto:someone@example.com">Jestersclub.contact@gmail.com</a> or <a href="https://discord.com/users/sumokuu">Discord</a></h3>
+            </div>
+            
+            <div class="donation-icons">
+                <form action="https://www.paypal.com/donate" method="post" target="_blank">
+                <input type="hidden" name="business" value="keraunxs@gmail.com" />
+                <input type="hidden" name="currency_code" value="EUR" />
+                <button type="submit"><img src="IMAGE GALLERY\paypal-donate-button.png" alt="Paypal" ></button>
+                </form>
+
+                <a href="https://donate.stripe.com/bJe9AV0JMd5mfDB4cX53O00" target="_blank">
+                <button type="submit"><img src="IMAGE GALLERY\stripe-donate-button.png" alt="Stripe" ></button>
+                </a>
+
+                
+                    <a href="https://nowpayments.io/donation?api_key=9c8832bb-9578-4a06-b060-169eed5c271d" target="_blank" rel="noreferrer noopener">
+                    <img src="IMAGE GALLERY\crypto-donate-button.png" alt="Bouton de don Bitcoin et crypto par NOWPayments">
+                    </a>
+
+
+
+                <!-- <a href="https://patreon.com/user?u=122405288&utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=creatorshare_fan&utm_content=join_link" target="_blank"><img src="IMAGE GALLERY/patreon badge.png" alt="Patreon" ></a>
+                <a href="https://discord.gg/kmruCND7X2" target="_blank"> <img src="IMAGE GALLERY/Join_Discord-logo.png" alt="Discord" ></a> 
+                -->
+            </div>
+    
+    </section>
+
+
+
+
+
+
+
+
+
+
         <!-- patreon Section -->
     <section id="fanbase" class="fanbase-section">
             <div class="fanbase-content">
-                <h2>Stay up to date with our projects and discover more!</h2>
-                <h3>Your contributions motivate us.</h3>
+                <h2>Join the Community and Stay Up to Date with Events and Projects!</h2>
             </div>
             <div class="fanbase-icons">
                 <a href="https://patreon.com/user?u=122405288&utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=creatorshare_fan&utm_content=join_link" target="_blank"><img src="IMAGE GALLERY/patreon badge.png" alt="Patreon" ></a>
@@ -173,23 +408,7 @@
 
 
       
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="about-content">
-            <h2>Who are we?</h2>
-            <p>
-                JestersClub is an independent video game studio based in France, passionate about creating authentic games that blend nostalgic charm with fresh, original ideas. we make a variety of mini-games designed to offer quick and enjoyable experiences.
-                <br>
-                We try to make our games feel like a fever dream.
-            </p>
-            <h3>Thanks to all the members for contributing to our projects!</h3>
-        </div>
-        <div class="about-image">
-            <img src="IMAGE GALLERY/dogmanIdle.png" alt="About Image">
-        </div>
 
-    </section>
- 
  <!--
     <div id="consentBox">
         <img src=
@@ -235,7 +454,7 @@
                     <a href="#games">Games</a>
                     <a href="#about">About</a>
                     <a href="#contact">Contact</a>
-                    <a href="#privacy">Privacy</a>
+                    <a href="privacy-policy2.html">Privacy</a>
                 </nav>
 
 

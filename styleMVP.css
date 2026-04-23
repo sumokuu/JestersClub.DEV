@@ -22,14 +22,13 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 2rem;
+    padding: 0.2rem;
     background: #3b0d0d;
     color: #ffcc00;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 
-/* Right-side container for links and icons */
 .header-right {
     display:flex;
     align-items: center;
@@ -122,8 +121,94 @@ header {
 }
 
 .language-toggle {
-    margin-left: 1rem;
+    margin: 1rem;
 }
+
+.menu-toggle {
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+
+@media (max-width: 768px) {
+    .navbar__toggle .bar {
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background: #fff;
+    }
+    /* Header adjustments */
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo-text-image {
+        height: auto;
+        width: 200px;
+    }
+
+    .header-links  {
+        display: none; /* Hidden initially, shown when menu toggled */
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        padding: 10px 0;
+        background-color: #444;
+    }
+     .social-media-icons {
+        display: none; /* Hidden initially, shown when menu toggled */
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        padding: 10px 0;
+        background-color: #444;
+    }
+
+    .menu-toggle {
+        display: block; /* Show menu button on mobile */
+    }
+
+    .menu-toggle.active + .header-links {
+        display: flex;
+    }
+
+    /* Footer adjustments */
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .footer-logo img {
+        height: 30px;
+    }
+
+    .footer-1 {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .footer-nav a {
+        display: none; 
+    }
+
+    .footer-social-media-icons {
+        flex-direction:column;
+        justify-content: flex-start;
+    }
+
+    .footer-esrb img {
+
+        clip-path: inset(0px 146px 0px 0px);
+    }
+}
+
+
 
 
 
@@ -133,25 +218,31 @@ header {
 /* Game Presentation Section */
 #game-presentation {
     font-family: "Playfair Display", serif;
-    padding: 50px;
-    margin-top: 70px;
+    padding: 5%;
     text-align: center;
-    background: linear-gradient(to top, #272727, #000000); /* Gradient from bottom to top */
+    background: linear-gradient(to top, #272727, #000000);
     background-size: 100% 200%; /* Double the height to allow for animation */
 
 }
 
 
 #game-presentation h1 {
-    font-size: 2.5rem;
+    font-size: 1rem;
     color: #FFD86D;
 }
 
 #game-presentation p {
-    font-size: 1.2rem;
-    margin: 50px;
+    font-size: 1rem;
+    padding: 2.5% 10%;
     line-height: 1.6;
 }
+
+
+
+
+
+
+
 
 /* Screenshots Gallery Section */
 #screenshots-gallery {
@@ -161,9 +252,9 @@ header {
 }
 
 #screenshots-gallery h2 {
-    font-size: 2rem;
+    font-size: 1rem;
     color: #FFD86D;
-    margin-bottom: 30px;
+    margin-bottom: px;
 }
 
 .gallery {
@@ -173,13 +264,13 @@ header {
 }
 
 .gallery img {
-    width: 800px;
+    max-width: 60%;
     height: auto;
     margin: 20px;
 }
 .gallery p {
-    font-size: 2rem;
-    margin-bottom: 100px;
+    font-size: 1rem;
+    margin-bottom: 5%;
 }
 
 
@@ -213,8 +304,8 @@ header {
 
 .fanbase-content h3 {
     line-height: 1.8;
-    padding: 30px 10%;
-
+    padding:0 10%;
+    font-size: 1rem;
 }
 
 .fanbase-icons {
@@ -225,7 +316,7 @@ header {
 }
 
 .fanbase-icons img {
-    max-width: 300px;
+    max-width: 200px;
     height: auto;
     object-fit: cover;
     border-radius: 4px; 
@@ -384,10 +475,9 @@ header {
     
     }
     #game-presentation p {
-        font-size: 1rem;
-        margin: 10px;
+        font-size: 0.75rem;
+        padding: 2.5% 0%;
         line-height: 1.5;
-        text-align: left;
     }
     
     .navbar__toggle .bar {
@@ -459,4 +549,82 @@ header {
     .footer-esrb img {
         clip-path: inset(0px 146px 0px 0px);
     }
+
+    .MVP {
+        padding-bottom: 20%;
+    }
 }
+
+
+
+
+.MVP {
+    display: block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color:#121212; /* Background color similar to screenshot */
+}
+
+
+ #fullscreen-btn {
+    position: absolute;
+    bottom: 15%;
+    right: 10%;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+
+.OGF-player {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    width: 100%;
+    box-sizing: border-box;
+} 
+
+.OGF-player-objects {
+    position: relative;
+    width: 100%;
+    max-width: 1384px;
+    aspect-ratio: 1384 / 938;
+}
+
+.OGF-player iframe {
+    position: absolute;
+    top: calc(166 / 938 * 100%);
+    left: calc(52 / 1384 * 100%);
+    width: calc(1280 / 1384 * 100%);
+    height: calc(720 / 938 * 100%);
+    border: none;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+.OGF-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+
+
+  #fullscreen-btn:hover { 
+    background: rgba(0,0,0,0.85); 
+}
+
+
+
