@@ -203,7 +203,7 @@ function handleFullscreen() {
 
 
     
-
+<!--
     <section class="OGF" id="OGF"> 
         <h3>TRY OUR NEWEST FREE GAME ON YOUR BROWSER NOW!</h3>
         <h4>This game is not available for mobile (yet)</h4>
@@ -225,7 +225,104 @@ function handleFullscreen() {
             <a href="https://jestersclubdev.itch.io/orquette-and-the-goon-fortress-nsfw" target="_blank"><img src="IMAGE GALLERY\itch-io badge.png" alt="itchio" ></a>
         </div>
     </section>         
+-->
+    <section class="OGF" id="OGF"> 
+    <h3>TRY OUR NEWEST FREE GAME ON YOUR BROWSER NOW!</h3>
 
+    <div class="OGF-player">
+        <div class="OGF-player-objects" id="ogf-wrapper">
+            <!-- Game (desktop only) -->
+            <iframe
+                id="game-frame"
+                src="https://sumokuu.github.io/OGF-DRAFT/"
+                scrolling="no"
+                allowfullscreen>
+            </iframe>
+            <img src="IMAGE GALLERY/OGF FRAME FINAL.png" class="OGF-frame" alt="OGF frame">
+            <button id="fullscreen-btn" onclick="goFullscreen()">⛶ Fullscreen</button>
+
+            <!-- Mobile fallback message -->
+            <div id="mobile-notice">
+                <p>🚫 This game is not available on mobile yet.</p>
+                <p>Please visit us on a desktop or laptop to play!</p>
+            </div>
+        </div>
+    </div>
+
+    <p>Enjoyed the game? Try the <span style="color: red;">full adult version</span> on Itch.io and download the game!</p>
+    <div class="OGF-available-on">
+        <a href="https://jestersclubdev.itch.io/orquette-and-the-goon-fortress-nsfw" target="_blank">
+            <img src="IMAGE GALLERY/itch-io badge.png" alt="itchio">
+        </a>
+    </div>
+</section>
+
+<script>
+    // Detect touchscreen / mobile device
+    const isTouchDevice = window.matchMedia("(hover: none) and (pointer: coarse)").matches;
+
+    if (isTouchDevice) {
+        // Remove game elements so they never load
+        const gameFrame = document.getElementById("game-frame");
+        const frameImg = document.querySelector(".OGF-frame");
+        const fullscreenBtn = document.getElementById("fullscreen-btn");
+        const mobileNotice = document.getElementById("mobile-notice");
+
+        if (gameFrame) gameFrame.remove();
+        if (frameImg) frameImg.style.display = "none";
+        if (fullscreenBtn) fullscreenBtn.style.display = "none";
+        if (mobileNotice) mobileNotice.style.display = "flex";
+    }
+
+    // Fullscreen function (desktop only — mobile elements are already removed above)
+    function goFullscreen() {
+        const frame = document.getElementById('game-frame');
+        if (!frame) return;
+
+        if (frame.requestFullscreen) {
+            frame.requestFullscreen();
+        } else if (frame.webkitRequestFullscreen) {
+            frame.webkitRequestFullscreen();
+        }
+    }
+
+    // Add back button when fullscreen is active
+    document.addEventListener('fullscreenchange', handleFullscreen);
+    document.addEventListener('webkitfullscreenchange', handleFullscreen);
+
+    function handleFullscreen() {
+        const isFullscreen = document.fullscreenElement || document.webkitFullscreenElement;
+        let backBtn = document.getElementById('back-btn');
+
+        if (isFullscreen) {
+            if (!backBtn) {
+                backBtn = document.createElement('button');
+                backBtn.id = 'back-btn';
+                backBtn.innerText = '← Back to site';
+                backBtn.style.cssText = `
+                    position: fixed;
+                    top: 12px;
+                    left: 12px;
+                    z-index: 9999;
+                    padding: 8px 14px;
+                    background: rgba(0,0,0,0.6);
+                    color: white;
+                    border: none;
+                    border-radius: 6px;
+                    font-size: 14px;
+                    cursor: pointer;
+                `;
+                backBtn.onclick = () => {
+                    if (document.exitFullscreen) document.exitFullscreen();
+                    else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+                };
+                document.body.appendChild(backBtn);
+            }
+        } else {
+            if (backBtn) backBtn.remove();
+        }
+    }
+</script>
 
 
 
