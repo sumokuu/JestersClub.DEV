@@ -1163,7 +1163,7 @@ header {
 
 
 
-
+/*
 
 .about-section {
     font-family: "League Spartan", sans-serif;
@@ -1172,13 +1172,13 @@ header {
     position: relative;
     height: 100vh;
     display: flex;
-    justify-content: center;  /* horizontal center */
+    justify-content: center;  
     align-items: center;   
 }
 
 .about-frame {
      display: block;
-  width: 75%;   /* smaller frame */
+  width: 75%;   
 
 }
 
@@ -1189,7 +1189,7 @@ header {
   transform: translate(-50%, -50%);
   padding: 10%;
   text-align: center;
-  width: 70%; /* keeps text inside frame */
+  width: 70%; 
 }
 
 
@@ -1213,8 +1213,56 @@ header {
     }
 }
 
+*/
+.about-section {
+    font-family: "League Spartan", sans-serif;
+    width: 100%;
+    background-color: #f5e9ce; 
+    position: relative;
+    min-height: 100vh;  /* changed from height to min-height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;    /* breathing room on mobile */
+}
 
+.about-frame {
+    display: block;
+    width: 75%;
+    height: auto;
+}
 
+.about-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10%;
+    text-align: center;
+    width: 70%;
+}
+
+@media (max-width: 890px) {
+    .about-section {
+        height: auto;   /* let it grow with content */
+    }
+
+    .about-frame {
+        width: 95%;
+    }
+
+    .about-content {
+        width: 80%;        /* narrower so text stays inside frame */
+        font-size: 0.7rem; /* smaller so it fits */
+        line-height: 1.2;
+        padding: 5%;       /* less padding so more room for text */
+    }
+
+    .about-content h2 {
+        font-size: 1rem;
+        line-height: 1.1;
+    }
+}
 
 
 
@@ -1441,4 +1489,25 @@ header {
         aspect-ratio: 16 / 9;
     }
     
+}
+
+
+/* Hide the mobile notice by default (shown via JS on touch devices) */
+#mobile-notice {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    background-color: #f5e9ce;
+    border: 2px solid #333;
+    border-radius: 12px;
+    font-family: "League Spartan", sans-serif;
+    min-height: 200px;
+}
+
+#mobile-notice p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
 }
