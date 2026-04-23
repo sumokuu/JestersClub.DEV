@@ -469,7 +469,7 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('IMAGE gallery/GAMES-BG-1.png');
+    background-image: url('IMAGE GALLERY/GAMES-BG-1.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -702,7 +702,7 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('IMAGE gallery/GAMES-BG-0.png');
+    background-image: url('IMAGE GALLERY/GAMES-BG-0.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -822,7 +822,7 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('IMAGE gallery/GAMES-BG-2.png');
+    background-image: url('IMAGE GALLERY/GAMES-BG-2.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -917,7 +917,7 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('IMAGE gallery/GAMES-BG-3.png');
+    background-image: url('IMAGE GALLERY/GAMES-BG-3.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -1261,6 +1261,11 @@ header {
     .about-content h2 {
         font-size: 1rem;
         line-height: 1.1;
+    }
+}
+@media (max-width: 600px) {
+    .about-frame {
+        content: url("IMAGE GALLERY/ABOUT Frame FINAL MOBILE.png");
     }
 }
 
